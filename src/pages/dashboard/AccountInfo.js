@@ -11,7 +11,7 @@ function AccountInfo() {
         </div>
         <div className="text-center">
    
-          <p className="text-xl text-gray-700 mb-1">Account Holder: <span className="text-blue-500">OMKAR JADHAV</span></p>
+          <p className="text-x text-gray-700 mb-1">Account Holder: <span className="text-blue-500">OMKAR JADHAV</span></p>
           <p className="text-x text-gray-700">Account Number: <span className="text-blue-500">XXXX-XXXX-XXXX-1234</span></p>
         </div>
       </div>
