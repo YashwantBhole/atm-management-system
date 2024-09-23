@@ -1,9 +1,11 @@
 import React, { useContext } from 'react';
 import { FaUserCircle } from 'react-icons/fa'; // Font Awesome Icon
 import { UserContext } from '../../UserContext';
+import { useNavigate } from 'react-router-dom';
 
 function AccountInfo() {
-
+   
+  const navigate = useNavigate();
   const {user} = useContext(UserContext);
 
   return (
@@ -23,7 +25,11 @@ function AccountInfo() {
           <p className='text-x text-blue-700 font-semibold'>Latur</p>
         </div>
         ) : (
-          <p>No account info available</p>
+          <>          <p>No account info available</p>
+          <label htmlFor="signup" className="block cursor-pointer mt-10 text-lg mb-2 text-blue-500 hover:text-blue-700 underline" 
+          onClick={() => navigate('/signup')}>Sign Up?</label>
+          </>
+
         )}
       </div>
     </div>
