@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+
 function SignIn() {
   const [atmCardNumber, setAtmCardNumber] = useState('');
   const [pin, setPin] = useState('');
@@ -8,7 +9,9 @@ function SignIn() {
   const [captcha, setCaptcha] = useState('');
   const [captchaValue, setCaptchaValue] = useState('');
   const [captchaError, setCaptchaError] = useState('');
+  const [showPopup , setShowPopup] = useState(false)
   const navigate = useNavigate();
+
 
   const generateCaptcha = () => {
     // Generate a simple CAPTCHA
@@ -24,8 +27,18 @@ function SignIn() {
     setCaptchaValue(e.target.value);
   };
 
+  //handles form submit
   const handleSignIn = (e) => {
     e.preventDefault();
+
+    const storedUser = JSON.parse(localStorage.getItem('user'));
+    if(storedUser && storedUser.atmCardNumber === atmCardNumber && storedUser.pin === pin && captcha === captchaValue){
+      setShowPopup(true)
+
+    }else{
+      alert('Invalid ATM card number and pin')
+    }
+
 
     // Validate CAPTCHA
     if (captchaValue !== captcha) {
@@ -40,10 +53,15 @@ function SignIn() {
       setError('');
       setCaptchaError('');
       // Proceed with authentication logic
-      alert('Sign In Successful');
-      navigate('/dashboard');
+      // alert('Sign In Successful');
+      // navigate('/dashboard');
     }
   };
+
+  const closePopup =() => {
+    setShowPopup(false)
+    navigate('/dashboard')
+  }
 
   const handleAtmCardChange = (e) => {
     setAtmCardNumber(e.target.value);
@@ -114,6 +132,22 @@ function SignIn() {
           </div>
         </form>
       </div>
+
+
+      {showPopup && (
+        <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50">
+          <div className="bg-white p-6 rounded-lg text-center shadow-lg">
+            <h3 className="text-2xl font-bold text-green-600">SignUp successful !</h3>
+            <button
+              className="mt-4 px-6 py-2 bg-blue-500 text-white rounded shadow hover:bg-blue-600"
+              onClick={closePopup}
+            >
+              Close
+            </button>
+            </div>
+            </div>
+        ) }
+
     </div>
   );
 }

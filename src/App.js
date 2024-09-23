@@ -10,10 +10,12 @@ import PinChange from '../src/pages/dashboard/PinChange';
 import TransactionHistory from '../src/pages/dashboard/TransactionHistory';
 import WithdrawMoney from '../src/pages/dashboard/WithdrawMoney';
 import './App.css'; // Add this to include custom Tailwind animation
+import { UserProvider } from './UserContext';
 
 function App() {
   return (
     <div className="app-container min-h-screen bg-cover bg-center animate-background-animation text-gray-800 font-sans">
+   <UserProvider>
       <Router>
         <Routes>
           <Route path="/" element={<LandingPage />} />
@@ -27,6 +29,7 @@ function App() {
           <Route path='/withdraw' element={<WithdrawMoney />} />
         </Routes>
       </Router>
+      </UserProvider>
     </div>
   );
 }

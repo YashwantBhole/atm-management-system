@@ -1,16 +1,22 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { FaRupeeSign } from 'react-icons/fa';
+import { UserContext  } from '../../UserContext';
 
 function WithdrawMoney() {
   const [withdrawAmount, setWithdrawAmount] = useState('');
   const [showPopup, setShowPopup] = useState(false);
 
+ const {withdrawMoney} = useContext(UserContext)
+
   const handleWithdraw = (e) => {
+
     e.preventDefault();
-    // Trigger popup when money is withdrawn
+     // Trigger popup when money is withdrawn
     setShowPopup(true);
-  
+    
+    withdrawMoney(parseFloat(withdrawAmount));  
   };
+
 
   const handleAmountChange = (e) => {
     setWithdrawAmount(e.target.value);

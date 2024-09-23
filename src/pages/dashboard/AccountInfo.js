@@ -1,19 +1,30 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { FaUserCircle } from 'react-icons/fa'; // Font Awesome Icon
+import { UserContext } from '../../UserContext';
 
 function AccountInfo() {
+
+  const {user} = useContext(UserContext);
+
   return (
     <div className="flex justify-center items-center h-screen">
-      <div className="bg-dark bg-opacity-70 p-8 rounded-lg shadow-lg animate-fadeInUp">
+      <div className="bg-light bg-opacity-70 p-8 rounded-lg shadow-lg animate-fadeInUp">
         <div className="flex items-center justify-center mb-6">
           {/* Profile Icon */}
           <FaUserCircle className="text-6xl text-blue-500 animate-bounce" />
         </div>
-        <div className="text-center">
-   
-          <p className="text-x text-gray-700 mb-1"><span className="text-blue-500">OMKAR JADHAV</span></p>
-          <p className="text-x text-gray-700">A/C No: <span className="text-blue-500">XXXX-XXXX-XXXX-1234</span></p>
+
+        {user ? (
+
+          <div className="text-center">
+          <p className="text-xl text-gray-700 mb-1 font-semibold"><span className="text-blue-500">{user.name}</span></p>
+          <p className="text-x text-gray-700 font-semibold">A/C No: <span className=" text-xl text-blue-500">{user.atmCardNumber}</span></p>
+          <p className="text-x text-gray-700 font-semibold">Branch : <span className="text-blue-500">Bank Of Maharashtra</span></p>
+          <p className='text-x text-blue-700 font-semibold'>Latur</p>
         </div>
+        ) : (
+          <p>No account info available</p>
+        )}
       </div>
     </div>
   );

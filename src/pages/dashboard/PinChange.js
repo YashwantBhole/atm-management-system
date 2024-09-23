@@ -2,14 +2,34 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 function PinChange() {
+const [currentPin , setCurrentPin] = useState('')
+const [newPin , setNewPin] = useState('')
+const [confirmPin , setConfirmPin] = useState('')
+
 const [showPopup , setShowPopup] = useState(false)
 const navigate = useNavigate();
 
+//form submit
 const handlePinChange = (e) => {
   e.preventDefault();
   // Trigger popup when money is withdrawn
-  setShowPopup(true);
 
+  const storedPin = JSON.parse(localStorage.getItem('user'));
+
+ //validate the current pin and new pin
+ if(currentPin !== storedPin.pin){
+ alert('Current Pin in Incorrect')
+ }
+ if(newPin !== confirmPin){
+  alert  ('new pin and confirm Pin Do not match')
+ }
+
+ if(storedPin.pin === currentPin && newPin === confirmPin){
+
+   storedPin.pin = newPin;
+   localStorage.setItem('user' ,JSON.stringify(storedPin))
+   setShowPopup(true);
+  }
 };
 
 const closePopup= ()=>{
@@ -31,6 +51,8 @@ const closePopup= ()=>{
               type="password"
               className="form-control text-lg p-2 border rounded"
               id="currentPin"
+              value={currentPin}
+              onChange={(e) => setCurrentPin(e.target.value)}
               placeholder="Enter current PIN"
               required
             />
@@ -41,6 +63,8 @@ const closePopup= ()=>{
               type="password"
               className="form-control text-lg p-2 border rounded"
               id="newPin"
+              value={newPin}
+              onChange={(e) => setNewPin(e.target.value)}
               placeholder="Enter new PIN"
               required
             />
@@ -51,6 +75,8 @@ const closePopup= ()=>{
               type="password"
               className="form-control text-lg p-2 border rounded"
               id="confirmNewPin"
+              value={confirmPin}
+              onChange={(e) => setConfirmPin(e.target.value)}
               placeholder="Confirm new PIN"
               required
             />
@@ -63,7 +89,7 @@ const closePopup= ()=>{
       {showPopup && (
         <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-50">
           <div className="bg-white p-6 rounded-lg text-center shadow-lg">
-            <h3 className="text-2xl font-bold text-green-600">PinChanged Successful!</h3>
+            <h3 className="text-2xl font-bold text-green-600">Pin Changed Successful!</h3>
             <button
               className="mt-4 px-6 py-2 bg-blue-500 text-white rounded shadow hover:bg-blue-600"
               onClick={closePopup}

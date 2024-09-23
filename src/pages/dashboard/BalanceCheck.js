@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { FaRupeeSign } from 'react-icons/fa';
+import { UserContext } from '../../UserContext';
 
 function BalanceCheck() {
-
+const {balance} = useContext(UserContext)
 
   return (
     <div
@@ -14,7 +15,7 @@ function BalanceCheck() {
         <h4 className="text-3xl font-bold text-green-600 mb-4">Balance Check</h4>
         <p className="text-xl text-gray-800">
           Your current balance is <span className="text-green-500">
-            <FaRupeeSign className="inline h-6" /> 5000
+            <FaRupeeSign className="inline h-6" /> {balance}
           </span></p>
 
 
