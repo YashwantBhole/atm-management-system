@@ -18,6 +18,10 @@ const withdrawMoney = (amount) => {
   }
 }
 
+const addMoney = (addAmount) =>{
+  setBalance(balance + addAmount)
+  setTransactions([...transactions, { type: 'Deposit', addAmount, date: new Date().toLocaleString() }])
+}
   const [user, setUser] = useState(() => {
     // Initialize from localStorage if available
     const storedUser = localStorage.getItem('user');
@@ -32,7 +36,7 @@ const withdrawMoney = (amount) => {
   }, [user]);
 
   return (
-    <UserContext.Provider value={{ user, setUser , balance , transactions , withdrawMoney }}>
+    <UserContext.Provider value={{ user, setUser , balance , transactions , withdrawMoney , addMoney}}>
       {children}
     </UserContext.Provider>
   );

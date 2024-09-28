@@ -11,6 +11,8 @@ import TransactionHistory from '../src/pages/dashboard/TransactionHistory';
 import WithdrawMoney from '../src/pages/dashboard/WithdrawMoney';
 import './App.css'; // Add this to include custom Tailwind animation
 import { UserProvider } from './UserContext';
+import AddAmount from './pages/dashboard/AddAmount';
+import TechnicalSupport from './pages/TechnicalSupport';
 
 function App() {
   return (
@@ -27,6 +29,8 @@ function App() {
           <Route path='/pin-change' element={<PinChange />} />
           <Route path='/transaction' element={<TransactionHistory />} />
           <Route path='/withdraw' element={<WithdrawMoney />} />
+          <Route path='/addMoney' element={<AddAmount/>} />
+          <Route path='/technical-support' element={<TechnicalSupport/>} />
         </Routes>
       </Router>
       </UserProvider>

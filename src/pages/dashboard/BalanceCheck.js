@@ -14,7 +14,7 @@ const {balance} = useContext(UserContext)
       <div className="bg-white bg-opacity-70 p-8 rounded-lg shadow-lg text-center">
         <h4 className="text-3xl font-bold text-green-600 mb-4">Balance Check</h4>
         <p className="text-xl text-gray-800">
-          Your current balance is <span className="text-green-500">
+          Your current balance is <span className="text-green-900 font-bold">
             <FaRupeeSign className="inline h-6" /> {balance}
           </span></p>
 

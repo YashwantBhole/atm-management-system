@@ -5,18 +5,25 @@ import { UserContext  } from '../../UserContext';
 function WithdrawMoney() {
   const [withdrawAmount, setWithdrawAmount] = useState('');
   const [showPopup, setShowPopup] = useState(false);
+  const [error, setError] = useState(false)
 
- const {withdrawMoney} = useContext(UserContext)
+ const {withdrawMoney, balance} = useContext(UserContext)
 
   const handleWithdraw = (e) => {
-
     e.preventDefault();
-     // Trigger popup when money is withdrawn
-    setShowPopup(true);
-    
-    withdrawMoney(parseFloat(withdrawAmount));  
-  };
+    const amount = parseFloat(withdrawAmount);
 
+    if(amount <= balance){
+      withdrawMoney(amount);
+        // Trigger popup when money is withdrawn
+        setShowPopup(true);
+    
+    }else{
+      setShowPopup(false)
+      setError(true);
+    }
+       
+  };
 
   const handleAmountChange = (e) => {
     setWithdrawAmount(e.target.value);
@@ -24,6 +31,7 @@ function WithdrawMoney() {
 
   const closePopup = () => {
     setShowPopup(false);
+    setError(false)
   };
 
   return (
@@ -32,7 +40,7 @@ function WithdrawMoney() {
       style={{ backgroundImage: 'url("/path-to-your-image.jpg")' }} // Replace with your background image path
     >
       <div className="bg-white bg-opacity-70 p-8 rounded-lg shadow-lg">
-        <h4 className="text-3xl font-bold text-blue-600 mb-4">Withdraw Money</h4>
+        <h4 className="text-3xl font-bold text-red-500 mb-4">Withdraw Money</h4>
         <form onSubmit={handleWithdraw}>
           <div className="mb-3">
             <label htmlFor="withdrawAmount" className="form-label text-lg text-gray-800">Amount</label>
@@ -46,7 +54,7 @@ function WithdrawMoney() {
               required
             />
           </div>
-          <button type="submit" className="btn btn-primary w-full text-lg py-2">Withdraw</button>
+          <button type="submit" className="bg-red-400 rounded text-white hover:bg-red-700 w-full text-lg py-2 ">Withdraw</button>
         </form>
       </div>
 
@@ -65,6 +73,18 @@ function WithdrawMoney() {
             </button>
           </div>
         </div>
+      )}
+
+      {error && (
+        <div className='fixed inset-0 flex justify-center items-center bg-black bg-opacity-50'>
+         <div className='bg-white p-6 rounded-lg text-center shadow-lg'>
+          <h3 className='text-2xl font-bold text-red-600 '>Insufficient Fund!</h3>
+          <button className='mt-4 px-6 py-2 bg-red-500 text-white rounded shadow hover:bg-red-600' 
+          onClick={closePopup}>
+           Close
+          </button>
+         </div>
+          </div>
       )}
     </div>
   );

@@ -17,22 +17,32 @@ const navigate = useNavigate();
         onClick={() => navigate('/account-info')}>
          Account Information
         </button>
+
         <button className="animated-button bg-red-500 hover:bg-red-600 text-white py-3 px-4 rounded-lg shadow-lg w-full text-center"
         onClick={()=> navigate('/withdraw')}>
           Withdraw Money
         </button>
+
         <button className="animated-button bg-green-500 hover:bg-green-600 text-white py-3 px-4 rounded-lg shadow-lg w-full text-center"
         onClick={() => navigate('/balance-check')}>
           Check Balance
+
         </button>
-        <button className="animated-button bg-green-500 hover:bg-green-600 text-white py-3 px-4 rounded-lg shadow-lg w-full text-center"
+        <button className="animated-button bg-orange-500 hover:bg-orange-600 text-white py-3 px-4 rounded-lg shadow-lg w-full text-center"
         onClick={() => navigate('/transaction')}>
          Transaction History
         </button>
+
         <button className="animated-button bg-yellow-500 hover:bg-yellow-600 text-white py-3 px-4 rounded-lg shadow-lg w-full text-center"
         onClick={() => navigate('/pin-change')}>
           Change PIN
         </button>
+
+        <button className="animated-button bg-pink-500 hover:bg-pink-600 text-white py-3 px-4 rounded-lg shadow-lg w-full text-center"
+        onClick={() => navigate('/addMoney')}>
+          Add Amount
+        </button>
+
       </div>
     </div>
   );
