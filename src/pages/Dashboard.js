@@ -4,6 +4,7 @@ import "./Dashboard.css"; // Include custom CSS for animations
 import { useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
+  
 const navigate = useNavigate();
 
   return (
@@ -40,7 +41,7 @@ const navigate = useNavigate();
 
         <button className="animated-button bg-pink-500 hover:bg-pink-600 text-white py-3 px-4 rounded-lg shadow-lg w-full text-center"
         onClick={() => navigate('/addMoney')}>
-          Add Amount
+         Deposit Amount
         </button>
 
       </div>

@@ -8,6 +8,7 @@ const {transactions } = useContext(UserContext)
 const [showPopup, setShowPopup] = useState(false)
 const showDetails =() =>{
   setShowPopup(true)
+  
 }
 const closePopup = () =>{
   setShowPopup(false)
@@ -22,17 +23,17 @@ const closePopup = () =>{
         <ul className="list-none m-0 p-0">
           <li className="animate-fade-in mb-2 flex flex-wrap justify-between items-center space-x-4">
             <span className="font-semibold flex items-center">
-              <FaRupeeSign className="mr-1" /> 100
+              <FaRupeeSign className="mr-1" /> 1000
             </span>
             
-            <span className="text-gray-600">1/1/2024, 18:45:21 PM</span>
+            <span className="text-gray-600">1/9/2024, 18:45:21 PM</span>
             <FaInfoCircle className="text-orange-500 ml-2 cursor-pointer" title="Transaction details" onClick={showDetails}/>
           </li>
           <li className="animate-fade-in mb-2 flex justify-between items-center">
             <span className="font-semibold flex items-center">
-              <FaRupeeSign className="mr-1" /> 50
+              <FaRupeeSign className="mr-1" /> 500
             </span>
-            <span className="text-gray-600">2/1/2024, 12:30:31 PM</span>
+            <span className="text-gray-600">12/9/2024, 12:30:31 PM</span>
             <FaInfoCircle className="text-orange-500 ml-2 cursor-pointer" title="Transaction details" onClick={showDetails}/>
           </li>
           {/* Add more transactions with the same animation */}

@@ -16,7 +16,7 @@ const TechnicalSupport = () => {
   };
 
   return (
-    <div className="max-w-xl mx-auto p-4">
+    <div className="max-w-xl mx-auto p-4 bg-dark bg-opacity-70">
       <h2 className="text-2xl text-blue-600 font-bold mb-4">Technical Support</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
@@ -77,8 +77,43 @@ const TechnicalSupport = () => {
           Submit Request
         </button>
       </form>
+ 
+      {/* Why Choose Us Section
+      <section className="bg-opacity-60 backdrop-md py-10">
+        <div className="container">
+          <h3 className="text-3xl md:text-4xl font-semibold text-center text-white mb-8">Why Choose Our ATM Card?</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4"> */}
+      {/* Feature 1 */}
+      {/* <div className="text-center bg-dark">
+              <div className="p-4">
+                <i className="bi bi-credit-card-2-front-fill text-6xl text-blue-400"></i>
+                <h5 className="mt-4 text-2xl font-bold text-white">Secure Transactions</h5>
+                <p className="mt-2 text-gray-300">Our cards ensure the highest level of encryption and protection for your transactions.</p>
+              </div>
+            </div> */}
 
+      {/* Feature 2 */}
+      {/* <div className="text-center bg-dark">
+              <div className="p-4">
+                <i className="bi bi-wallet-fill text-6xl text-green-400"></i>
+                <h5 className="mt-4 text-2xl font-bold text-white">Easy Access</h5>
+                <p className="mt-2 text-gray-300">Manage your account and transactions anytime, anywhere through our online platform.</p>
+              </div>
+            </div> */}
 
+      {/* Feature 3 */}
+      {/* <div className="text-center bg-dark  ">
+              <div className="p-4">
+                <i className="bi bi-shield-lock-fill text-6xl text-yellow-400"></i>
+                <h5 className="mt-4 text-2xl font-bold text-light-900">24/7 Support</h5>
+                <p className="mt-2 text-gray-300">Get round-the-clock assistance from our customer support team for all your queries.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> */}
+
+    
       <footer className="mt-8 text-center text-sm text-gray-500">
         <p>Contact us: support@example.com</p>
         <p>Phone: (123) 456-7890</p>

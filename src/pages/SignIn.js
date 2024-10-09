@@ -53,8 +53,7 @@ function SignIn() {
       setError('');
       setCaptchaError('');
       // Proceed with authentication logic
-      // alert('Sign In Successful');
-      // navigate('/dashboard');
+
     }
   };
 

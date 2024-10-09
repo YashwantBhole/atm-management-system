@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'; // Assuming you're using react-router f
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white py-8">
+    <footer className="bg-gray-900 text-white py-2">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
         
         {/* Social Media Icons */}
@@ -21,7 +21,7 @@ const Footer = () => {
 
         {/* Technical Support Link */}
         <div className="flex justify-center">
-          <Link to="/technical-support" className="text-white hover:text-blue-500 transition duration-300">
+          <Link to="/technical-support" className="text-blue-400 hover:text-blue-800 transition duration-300">
             Technical Support
           </Link>
         </div>

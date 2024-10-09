@@ -9,9 +9,10 @@ function SignUp() {
   const [name , setName] = useState('')
   const [numberError, setNumberError] = useState('');
   const [error, setError] = useState('');
-  const {setUser} = useContext(UserContext);
   const [showPopup , setShowPopup] = useState(false)
 
+  const {setUser} = useContext(UserContext);
+  
   const navigate = useNavigate();
 
   const handleAtmCardChange = (e) => {

@@ -17,7 +17,7 @@ const AddAmount = () => {
      if(amount > 0 ){
         addMoney(amount)// balance from UserContext.js will get updated using addMoney
         setShowPopup(true);
-        setAddAmount('')
+  
      }else{
         alert('please enter valid amount')
      }
