@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/atm-management-system/static/css/main.cd3dffa6.css",
-    "main.js": "/atm-management-system/static/js/main.3a057e5f.js",
+    "main.css": "/atm-management-system/static/css/main.f76117aa.css",
+    "main.js": "/atm-management-system/static/js/main.5f39d3d6.js",
     "static/media/spaceImage.jpg": "/atm-management-system/static/media/spaceImage.b6c4651f18476ae525b3.jpg",
     "static/media/atmImage.jpg": "/atm-management-system/static/media/atmImage.2bc751bb4b419775fb18.jpg",
     "index.html": "/atm-management-system/index.html",
-    "main.cd3dffa6.css.map": "/atm-management-system/static/css/main.cd3dffa6.css.map",
-    "main.3a057e5f.js.map": "/atm-management-system/static/js/main.3a057e5f.js.map"
+    "main.f76117aa.css.map": "/atm-management-system/static/css/main.f76117aa.css.map",
+    "main.5f39d3d6.js.map": "/atm-management-system/static/js/main.5f39d3d6.js.map"
   },
   "entrypoints": [
-    "static/css/main.cd3dffa6.css",
-    "static/js/main.3a057e5f.js"
+    "static/css/main.f76117aa.css",
+    "static/js/main.5f39d3d6.js"
   ]
 }
