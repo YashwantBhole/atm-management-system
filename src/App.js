@@ -1,6 +1,6 @@
 import React from 'react';
 import { HashRouter as Router, Route, Routes } from 'react-router-dom';
-import LandingPage from './pages/LandingPage';
+import LandingPage from './pages/LandingPage/LandingPage'
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 import Dashboard from './pages/Dashboard';
@@ -13,6 +13,8 @@ import './App.css'; // Add this to include custom Tailwind animation
 import { UserProvider } from './UserContext';
 import AddAmount from './pages/dashboard/AddAmount';
 import TechnicalSupport from './pages/TechnicalSupport';
+import BlockCard from './pages/dashboard/BlockCard';
+import Logout from './pages/dashboard/LogOut';
 
 function App() {
   return (
@@ -23,6 +25,7 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path='/logout' element={<Logout/>} />
           <Route path='/dashboard' element={<Dashboard />} />
           <Route path='/account-info' element={<AccountInfo />} />
           <Route path='/balance-check' element={<BalanceCheck />} />
@@ -30,6 +33,7 @@ function App() {
           <Route path='/transaction' element={<TransactionHistory />} />
           <Route path='/withdraw' element={<WithdrawMoney />} />
           <Route path='/addMoney' element={<AddAmount/>} />
+          <Route path='/blockCard' element={<BlockCard/>} />
           <Route path='/technical-support' element={<TechnicalSupport/>} />
         </Routes>
       </Router>

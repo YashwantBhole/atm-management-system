@@ -1,4 +1,5 @@
-@keyframes backgroundAnimation {
+/* Custom animation for the background */
+@keyframes gradientAnimation {
     0% {
       background-position: 0% 50%;
     }
@@ -10,11 +11,16 @@
     }
   }
   
-  .app-container {
-    background-image: url('../public/spaceImage.jpg'); /* Add your image here */
-    background-size: cover;
-    
-    background-position: center;
-    animation: backgroundAnimation 15s ease infinite;
+  .bg-gradient-animate {
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4, #fbc2eb, #a6c1ee);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    z-index: -1; /* Ensure the background is behind the content */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.8; /* Adjust opacity to avoid overpowering the content */
   }
   

@@ -15,11 +15,9 @@ const closePopup = () =>{
 }
   return (
     <div
-      className="flex justify-center items-center h-screen bg-cover bg-center"
-      style={{ backgroundImage: 'url("/path-to-your-image.jpg")' }} // Replace with your background image path
-    >
-      <div className="bg-white bg-opacity-70 p-4  rounded-lg shadow-lg  ">
-        <h4 className="text-3xl font-bold text-orange-600 mb-4">Transaction History</h4>
+      className="flex justify-center items-center min-h-screen bg-cover bg-center" >
+      <div className="bg-white bg-opacity-70 p-6 rounded-lg shadow-lg max-w-3xl w-full ">
+        <h4 className="text-3xl font-bold text-orange-600 mb-4 text-center">Transaction History</h4>
         <ul className="list-none m-0 p-0">
           <li className="animate-fade-in mb-2 flex flex-wrap justify-between items-center space-x-4">
             <span className="font-semibold flex items-center">
@@ -43,6 +41,7 @@ const closePopup = () =>{
                         <FaRupeeSign className="mr-1" /> {transaction.amount}{transaction.addAmount} {/*either withdrawl or deposit */}
                       </span>
                       <span className="text-gray-600">{transaction.date}</span>
+          
                       <FaInfoCircle className="text-orange-500 ml-2 cursor-pointer" title="Transaction details" onClick={showDetails}/>
                     </li>
           ))}
@@ -64,7 +63,7 @@ const closePopup = () =>{
             </button>
             </div>
             </div>
-      )};
+      )}
     </div>
   );
 }

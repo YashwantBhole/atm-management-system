@@ -12,7 +12,7 @@ const [transactions ,setTransactions] = useState([]);
 const withdrawMoney = (amount) => {
   if( amount <= balance){
     setBalance( balance - amount);
-    setTransactions([...transactions , {amount , date : new Date().toLocaleString() }]);
+    setTransactions([...transactions , {amount , date : new Date().toLocaleString(),  }]);
   }else{
     alert('Insufficient Funds !')
   }

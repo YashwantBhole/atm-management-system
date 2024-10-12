@@ -43,7 +43,11 @@ function WithdrawMoney() {
         <h4 className="text-3xl font-bold text-red-500 mb-4">Withdraw Money</h4>
         <form onSubmit={handleWithdraw}>
           <div className="mb-3">
-            <label htmlFor="withdrawAmount" className="form-label text-lg text-gray-800">Amount</label>
+          <p className="text-xl text-gray-800">
+          current balance :  <span className="text-green-900 font-bold">
+            <FaRupeeSign className="inline h-6" /> {balance}
+          </span></p>
+
             <input
               type="number"
               className="form-control text-lg p-2 border rounded"
