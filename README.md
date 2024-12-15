@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# ATM Management System 💳
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The **ATM Management System** is a simple web-based platform built to simulate the operations of an ATM machine. Users can manage their ATM cards, perform transactions like withdrawing money, check balances, and change their PIN. This system provides a safe and easy way to manage virtual ATM accounts.
 
-## Available Scripts
+## 📋 Table of Contents
+- [About](#about)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Contributing](#contributing)
+- [Author](#author)
 
-In the project directory, you can run:
+## About
 
-### `npm start`
+The **ATM Management System** is an application where users can:
+- Sign up with their ATM card information.
+- Log in with their credentials (ATM card number and PIN).
+- View account details like balance and transaction history.
+- Withdraw money from the virtual ATM.
+- Change PIN for secure access.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The project focuses on user security, ease of use, and simulating real-world ATM operations.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
+- 🔒 **Secure Login**: Users can securely log in using their ATM card number and PIN.
+- 🏦 **Account Information**: View current balance and transaction history.
+- 💵 **Withdraw Money**: Perform withdrawals and update account balance.
+- 🔄 **Change PIN**: Users can change their PIN for secure access.
+- 💳 **Account Registration**: Users can create an account with their ATM card number, name, and PIN.
+- 📜 **Transaction History**: View all previous transactions made by the user.
 
-### `npm test`
+## Technologies Used
+- **Frontend**: React.js, Tailwind CSS
+- **Backend**: Node.js, Express.js (if applicable)
+- **Database**: MongoDB (for storing user data, transactions, etc.)
+- **Authentication**: JWT (JSON Web Tokens)
+- **Deployment**: GitHub Pages (for front-end)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation
+To get started with the project, clone the repository and install the necessary dependencies:
 
-### `npm run build`
+    git clone https://github.com/YashwantBhole/ATM-Management-System.git
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Contributing
+We welcome contributions! To contribute:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Fork the repository.
+- Create your feature branch (`git checkout -b feature-name`).
+- Commit your changes (`git commit -m 'Add new feature'`).
+- Push to the branch (`git push origin feature-name`).
+- Open a Pull Request.
 
-### `npm run eject`
+## 👨‍💻 Author  
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Developed by **Yashwant Bhole**  
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<a href="https://www.linkedin.com/in/yashwantbhole/" target="_blank">
+  <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn" />
+</a>  
+<a href="https://github.com/YashwantBhole" target="_blank">
+  <img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white" alt="GitHub" />
+</a>
